@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-entity camera look-controls wasd-controls="acceleration:10" position="0 1.6 0"></a-entity>
+        <a-assets>
+            <!-- 50x50 -->
+            <img id="barriere1" src="./images/50x50/barriere_leger.png">
+            <img id="petite_dalle" src="./images/50x50/petite_dalle_leger.png">
+
+            <a-mixin id="barr1" geometry="primitive: plane; height : 0.5; width: 0.5;" rotation="0 90 0" material="src: #barriere1; transparent: true;side: double;"></a-mixin>
+
+            <!-- 50x100 -->
+            <img id="barriere2" src="./images/50x100/barriere2_leger.png">
+
+            <a-mixin id="barr2" geometry="primitive: plane; height : 1.25; width: 0.5;" rotation="0 90 0" material="src: #barriere2; transparent: true;side: double;"></a-mixin>
+
+
+            <!-- 50x200 -->
+            <img id="serre1" src="./images/50x200/serre1_leger.png">
+            <img id="serre2" src="./images/50x200/serre2_leger.png">
+            <img id="serre3" src="./images/50x200/serre3_leger.png">
+            <img id="serre4" src="./images/50x200/serre4_leger.png">
+            <img id="serre5" src="./images/50x200/dalles_leger.png">
+
+
+            <a-mixin id="s1" geometry="primitive: plane; height : 2; width: 0.5;" rotation="0 90 0" material="src: #serre1; side: double;"></a-mixin>
+            <a-mixin id="fleur" geometry="primitive: plane; height : 2; width: 0.5;" rotation="0 90 0" material="src: #serre2;side: double;"></a-mixin>
+            <a-mixin id="vitre" geometry="primitive: plane; height : 2; width: 0.5;" rotation="0 90 0" material="src: #serre3;side: double;"></a-mixin>
+            <a-mixin id="pot" geometry="primitive: plane; height : 2; width: 0.5;" rotation="0 90 0" material="src: #serre4;side: double;"></a-mixin>
+            <a-mixin id="dalles" geometry="primitive: plane; height : 2; width: 0.5;" rotation="0 90 0" material="src: #serre5;side: double;"></a-mixin>
+
+
+            <!-- 100x200 -->
+            <img id="porte" src="./images/100x200/porte_leger.png">
+            <img id="fleur_grand" src="./images/100x200/fleur_leger.png">
+
+
+            <a-mixin id="door" geometry="primitive: plane; height : 2; width: 1;" rotation="0 90 0" material="src: #porte;side: double;"></a-mixin>
+            <a-mixin id="big_flower" geometry="primitive: plane; height : 2; width: 1;" rotation="0 90 0" material="src: #fleur_grand;side: double;"></a-mixin>
+
+
+            <!-- 200x200 -->
+            <img id="big_serre" src="./images/200x200/serre_leger.png">
+
+            <a-mixin id="grande_serre" geometry="primitive: plane; height : 2; width: 2;" rotation="0 90 0" material="src: #big_serre;side: double;"></a-mixin>
+
+            <!-- sky -->
+            <img id="arbre_sky" src="./images/sky/arbre_leger.png">
+           
+
+
+        </a-assets>
+
+        <!-- sol et plafond -->
+        <a-plane rotation="-90 0 0" width="4" height="4" material="color: #ffffff; src : #petite_dalle; repeat : 8 8 ;side: double"></a-plane>
+        <a-plane position="0 2 0" rotation="-90 0 0" width="4" height="4" material="color: #ffffff; src : #petite_dalle; repeat : 8 8 ;side: double"></a-plane>
+
+        <!-- 50x50 -->
+        <a-entity mixin="barr1" position="0.25 0.25 -0.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="barr1" position="-1 0.25 0.75" ></a-entity>
+        <a-entity mixin="barr1" position="-1 0.25 1.25" ></a-entity>
+        <a-entity mixin="barr1" position="-1 0.25 1.75" ></a-entity>
+        <!-- 50x100 -->
+        <a-entity mixin="barr2" position="-0.25 1.37 -0.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="barr2" position="1.75 1.37 -0.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="barr2" position="1 1.37 -1.75" ></a-entity>
+        <a-entity mixin="barr2" position="-1.75 1.37 0" rotation="0 0 0" ></a-entity>
+        <!-- 50x200 -->
+        <a-entity mixin="s1" position="0.75 1 2"  rotation="0 0 0.01"></a-entity>
+        <a-entity mixin="s1" position="-2 1 -1.25"  rotation="0 90 0.01"></a-entity>
+        <a-entity mixin="s1" position="1.5 1 1.25"  rotation="0 90 0.01"></a-entity>
+        <a-entity mixin="s1" position="1.25 1 1.50021"  rotation="0 0 0.01"></a-entity>
+        <a-entity mixin="s1" position="-1.25 1 -1"  rotation="0 180 0.01"></a-entity>
+        <a-entity mixin="s1" position="-2 1 -1.75"  rotation="0 270 0.01"></a-entity>
+
+        <a-entity mixin="vitre" position="1.25 1 0.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="vitre" position="-1.25 1 1.5" rotation="0 0 0" ></a-entity>
+
+        <a-entity mixin="pot" position="0.25 1 2" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="pot" position="0.25 1 2" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="pot" position="1.75 1 0" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="pot" position="-1.75 1 -1.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="pot" position="-1 1 -1.25" ></a-entity>
+
+        <a-entity mixin="dalles" position="0.5 1 0.25" ></a-entity>
+        <a-entity mixin="dalles" position="-0.5 1 0.25" ></a-entity>
+        <a-entity mixin="dalles" position="-0.5 1 -0.75" ></a-entity>
+        <a-entity mixin="dalles" position="0.5 1 -0.75" ></a-entity>
+        <a-entity mixin="dalles" position="0.75 1 -0.5"  rotation="0 0 0"></a-entity>
+        <a-entity mixin="dalles" position="-0.75 1 -0.5"  rotation="0 0 0"></a-entity>
+        <a-entity mixin="dalles" position="0.75 1 0"  rotation="0 0 0"></a-entity>
+        <a-entity mixin="dalles" position="1 1 -0.75" ></a-entity>
+        <a-entity mixin="dalles" position="1 1 -1.25" ></a-entity>
+        <a-entity mixin="dalles" position="0.75 1 -1.5"  rotation="0 0 0"></a-entity>
+        <a-entity mixin="dalles" position="0 1 -0.75" ></a-entity>
+        <a-entity mixin="dalles" position="0 1 0.75" ></a-entity>
+        <a-entity mixin="dalles" position="-1.25 1 0.5"  rotation="0 0 0"></a-entity>
+
+
+        <!-- 100x200 -->
+        <a-entity mixin="big_flower" position="1.5 1 2"  rotation="0 180 0"></a-entity>
+        <a-entity mixin="big_flower" position="-1.5 1 2"  rotation="0 180 0"></a-entity>
+        <a-entity mixin="big_flower" position="-0.5 1 2"  rotation="0 0 0"></a-entity>
+        <a-entity mixin="big_flower" position="-1.5 1 1" ></a-entity>
+        <a-entity mixin="big_flower" position="-2 1 -0.5" ></a-entity>
+        <a-entity mixin="big_flower" position="-1.5 1 -0.5" ></a-entity>
+        <a-entity mixin="big_flower" position="0.5 1 1.5" ></a-entity>
+        <a-entity mixin="big_flower" position="1 1 1"  rotation="0 180 0"></a-entity>
+
+        <a-entity mixin="door" position="0 1 0.5" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="door" position="-1 1 0" ></a-entity>
+        <a-entity mixin="door" position="0 1 -1.5" ></a-entity>
+        <a-entity mixin="door" position="-0.5 1 1" rotation="0 0 0" ></a-entity>
+        <a-entity mixin="door" position="-0.5 1 -1.5" rotation="0 0 0" ></a-entity>
+        <!-- 200x200 -->
+        <a-entity mixin="grande_serre" position="1 1 -2" rotation="0 180 0" ></a-entity>
+        <a-entity mixin="grande_serre" position="2 1 -1" rotation="0 270 0" ></a-entity>
+        <a-entity mixin="grande_serre" position="2 1 1" ></a-entity>
+        <a-entity mixin="grande_serre" position="1.5 1 -0.5" rotation="0 270 0" ></a-entity>
+        <a-entity mixin="grande_serre" position="-2 1 1" ></a-entity>
+
+
+        <!-- sky -->
+        <a-sky color="white" material="src : #arbre_sky" ></a-sky>
+    </a-scene>
+  </body>
+</html>
+
