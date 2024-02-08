@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera look-controls wasd-controls="acceleration:10" position="0 1.6 0"></a-entity>
+        <a-assets>
+
+
+            <a-asset-item id="tree-obj" src="./modeles2/samples/Tree_02/Tree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="./modeles2/samples/Tree_02/Tree.mtl" ></a-asset-item>
+
+            <a-asset-item id="tree_v2-obj" src="./modeles2/samples/Tree_02/Tree.obj"></a-asset-item>
+            <a-asset-item id="tree_v2-mtl" src="./modeles2/samples/Tree_02/Tree_v2.mtl" ></a-asset-item>
+
+            <a-asset-item id="tree_v3-obj" src="./modeles2/samples/Tree_02/Tree.obj"></a-asset-item>
+            <a-asset-item id="tree_v3-mtl" src="./modeles2/samples/Tree_02/Tree_v3.mtl" ></a-asset-item>
+
+            <a-asset-item id="tree_v4-obj" src="./modeles2/samples/Tree_02/Tree.obj"></a-asset-item>
+            <a-asset-item id="tree_v4-mtl" src="./modeles2/samples/Tree_02/Tree_v4.mtl" ></a-asset-item>
+
+            <a-asset-item id="tree_v5-obj" src="./modeles2/samples/Tree_02/Tree.obj"></a-asset-item>
+            <a-asset-item id="tree_v5-mtl" src="./modeles2/samples/Tree_02/Tree_v5.mtl" ></a-asset-item>
+
+            <img id="sol" src="./modeles2/samples/Tree_02/DB2X2_L02.png">
+
+        </a-assets>
+        
+     <!-- box -->
+        <!-- <a-box color="grey" depth="4" height="4" width="4" position="0 2 0" material=" side : double"></a-box> -->
+        <!-- <a-plane position="0 0 0" height="4" width="4" rotation="-90 0 0" material="color : white src : #sol "></a-plane> -->
+
+        <!-- tree BLEU -->
+        <a-entity position="1.01092 0 -1.27911" scale="0.25 0.25 0.25" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl"></a-entity>
+        <a-entity position="0.74406 0 -1.17612" scale="0.15 0.45 0.16" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl"></a-entity>
+        <a-entity position="0.42049 -0.01575 0.49524" scale="0.1 0.51 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl"></a-entity>
+
+        <!-- tree VIOLET VERT -->
+        <!-- <a-entity position="0.5 0 0.5" scale="0.25 0.25 0.25" obj-model="obj: #tree_v3-obj; mtl: #tree_v3-mtl" ></a-entity> -->
+        <a-entity position="-1.31589 0 0.5" scale="0.1 0.55 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl"></a-entity>
+        <a-entity position="-0.01138 0 -1.60975" scale="0.1 0.15 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl"></a-entity>
+        <a-entity position="0.17789 0 -0.57595" scale="0.1 0.3 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl"></a-entity>
+        <a-entity position="-1.01307 -0.00712 0.34849" scale="0.14 0.36 0.11" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl"></a-entity>
+
+        <!-- tree JAUNE VIOLET -->
+        <a-entity position="0.5 0 1.26461" scale="0.25 0.25 0.25" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v4.mtl"></a-entity>
+        <a-entity position="-0.38815 -0.06485 1.10575" scale="0.14 0.27 0.12" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v4.mtl"></a-entity>
+        
+        <!-- tree VERT ROSE -->
+        <a-entity position="-1.18741 0 -1.52878" scale="0.1 0.1 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl"></a-entity>
+        <a-entity position="-0.54701 0 -0.54765" scale="0.1 0.1 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl"></a-entity>
+        <a-entity position="-1.83894 0 -0.54765" scale="0.1 0.1 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl"></a-entity>
+        <a-entity position="1.54401 -0.00712 0.5" scale="0.25 0.25 0.25" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl"></a-entity>
+
+        <!-- ARBRES PLAFOND -->
+          <!-- bleu et rouge -->
+          <a-entity position="-1.90673 4 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="-0.30844 4 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="1.7 4 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="-1.21816 4 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 90 0"></a-entity>
+          <a-entity position="-3.14481 4 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 90 0"></a-entity>
+
+          <!-- bleu et rouge -->
+          <a-entity position="-1.90673 0 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="-0.30844 0 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="1.7 0 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 0 0"></a-entity>
+          <a-entity position="-1.21816 0 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 90 0"></a-entity>
+          <a-entity position="-3.14481 0 -1.25" scale="0.8 0.5 0.1" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v2.mtl" rotation="90 90 0"></a-entity>
+
+        <!-- MUR VERT -->
+        <a-entity position="-3.38778 0.80725 -1.96602" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-3.38778 2.00769 -1.9705" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-3.38778 3.12523 -1.9705" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.5545 3.41612 -1.9705" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.00946 2.23232 -1.9705" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.00946 0.92934 -1.9705" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+
+        <!-- MUR VERT 2 -->
+        <a-entity position="-3.38778 0.80725 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-3.38778 2.00769 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-3.38778 3.12523 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.5545 3.41612 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.00946 2.23232 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+        <a-entity position="-1.00946 0.92934 2" scale="-0.17 0.7 0.52" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v5.mtl" rotation="90 90 0"></a-entity>
+
+        <!-- MUR VIOLET -->
+        <a-entity position="1.91209 0.8097 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="1.91209 2.07315 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="1.91209 3.39827 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="1.91209 3.39827 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="1.91209 2.67885 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="1.91209 0.19039 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="1.91209 1.49505 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+
+        <!-- MUR VIOLET 2 -->
+        <a-entity position="-2 0.8097 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="-2 2.07315 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="-2 3.39827 -2.61755" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 0 0"></a-entity>
+        <a-entity position="-2 3.39827 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="-2 2.67885 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="-2 0.19039 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+        <a-entity position="-2 1.49505 2.89493" scale="0.25 0.45 0.53" obj-model="obj: ./modeles2/samples/Tree_02/Tree.obj; mtl: ./modeles2/samples/Tree_02/Tree_v3.mtl" rotation="90 180 0"></a-entity>
+
+       <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
