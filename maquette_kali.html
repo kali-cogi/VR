@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+        <a-entity camera look-controls wasd-controls="acceleration:100; fly : true" position="0 1.6 0"></a-entity>
+
+
+        <a-assets>
+            <a-asset-item id="maquette" src="./modeles_maquette/maquette2.glb"></a-asset-item>
+          </a-assets>
+
+      <!-- entity qui 180 degrés tout -->
+      <a-entity rotation="0 180 0" position="0 -10 -15">
+        <!-- entity qui fait tout tourner -->
+        <!-- <a-entity animation="property: rotation; to: 0 360 0; dur: 500000; loop: true; easing: linear"> -->
+            
+              <!-- maquette -->
+              <a-entity gltf-model="#maquette" scale="50 50 50" position="0 -2.5 -0.5" rotation="-2.7 17.5 -3.4"
+              ></a-entity>
+
+              <!-- sphere qui tourne pour light -->
+              <a-sphere position="0 5 0" radius="20" opacity="0" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+                <!-- <a-sphere position="20 0 0" radius="2" color="yellow"></a-sphere> -->
+                <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; color: #BF5C2E " position="20 0 0" ></a-entity>
+                <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; color: #E9B229" position="-20 0 0" ></a-entity>
+
+              </a-sphere>
+
+              <!-- light qui passe dans le ptit trou -->
+              <a-entity light="type: point; intensity: 1; distance: 50; decay: 2; color: #E1FFAF" position="-1.75 3 -3"
+              animation="property: position; dur: 5000; easing: linear; to: 10 3 -3; loop: true">
+              </a-entity>
+
+              <!-- spot1 -->
+              <a-light type="spot" position="0 4 -3.5" rotation="-90 0 0" color="white" intensity="1"
+                angle="20" penumbra="0.4">
+              </a-light>
+
+          <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+          <a-sky color="#ECECEC"></a-sky>
+          
+          <!-- <a-box scale="0.5 0.5 0.5" position="-1.75 3 -3" color="red"
+          animation="property: position; dur: 5000; easing: linear; to: 10 3 -3; loop: true">
+            </a-box> -->
+
+        <!-- </a-entity> -->
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
+<!-- animation="property: color; from: yellow; to: red; dur: 1000; loop: true; easing: linear" -->
